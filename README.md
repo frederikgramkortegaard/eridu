@@ -6,6 +6,8 @@
 
 :pushpin: [Project Description](https://github.com/frederikgram/eridu/blob/master/projectdescription.pdf)
 
+:pushpin: [Code Examples](https://github.com/frederikgram/eridu/tree/master/examples)
+
 :speech_balloon: The reader is advised to look at the section 8: _"performance evaluation"_ in the attached thesis to get an overview of the viability of the language. 
 
 :warning: This compiler is only expected to work on Linux based distros such as Ubuntu, and thus, the correctness on other operating systems can not be guaranteed.
