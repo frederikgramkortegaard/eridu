@@ -12,7 +12,6 @@
 
 :warning: This compiler is only expected to work on Linux based distros such as Ubuntu, and thus, the correctness on other operating systems can not be guaranteed.
 
-## User Guide
 ### How to compile
 It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`, it is recommended to run `make clean` before any attempt to compile Eridu is recommended. 
 ### How to run examples (patterns etc.)
@@ -31,7 +30,7 @@ Followed by:
 `gcc -no-pie output.s`
 
 `./a.out`
-### Misc.
+### Testing
 Tests can be run using our testing framework _Gula_, to use this framework, Python 3.8 and the numpy package is required. To see the help menu, use the command:
 
 `python3 ./tests/gula.py -help`
@@ -40,6 +39,6 @@ And for a complete test pass, run:
 
 `python3 ./tests/gula.py -src ../build -path ./tests -verbose`
 
-
+### Benchmarking
 Benchmarking can be performed using our benchmarking framework _Utu_ by running the following command:
 `python3 ./benchmarks/utu.py -src ./build -path . -verbose`
