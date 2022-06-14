@@ -21,10 +21,9 @@ To use the compiler, the following command can be run:
 From here, the newly created `output.s` file can be constructed into a runnable by using `gcc`. Here it is important to note that the `-no-pie` flag for GCC is required when using strings.
 
 We advice the reader to test the following examples:
-- ```
-./build/compiler < examples/generic_vehicle_simulator.erd`
 ```
-- ```
+./build/compiler < examples/generic_vehicle_simulator.erd`
+
 ./build/compiler < ./examples/iterator.erd
 ```
 Followed by:
