@@ -42,5 +42,7 @@ And for a complete test pass, run:
 ### Benchmarking
 Benchmarking can be performed using our benchmarking framework _Utu_ by running the following command:
 `python3 ./benchmarks/utu.py -src ./build -path . -verbose`
+
 Too see all the available options, run:
+
 `python3 ./benchmarks/utu.py -help`
