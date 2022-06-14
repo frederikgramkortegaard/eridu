@@ -34,16 +34,24 @@ gcc -no-pie output.s
 ### Testing
 Tests can be run using our testing framework _Gula_, to use this framework, Python 3.8 and the numpy package is required. To see the help menu, use the command:
 
-```python3 ./tests/gula.py -help```
+```
+python3 ./tests/gula.py -help
+```
 
 And for a complete test pass, run:
 
-```python3 ./tests/gula.py -src ../build -path ./tests -verbose```
+```
+python3 ./tests/gula.py -src ../build -path ./tests -verbose
+```
 
 ### Benchmarking
 Benchmarking can be performed using our benchmarking framework _Utu_ by running the following command:
-```python3 ./benchmarks/utu.py -src ./build -path . -verbose```
+```
+python3 ./benchmarks/utu.py -src ./build -path . -verbose
+```
 
 Too see all the available options, run:
 
-```python3 ./benchmarks/utu.py -help```
+```
+python3 ./benchmarks/utu.py -help
+```
