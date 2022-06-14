@@ -7,7 +7,7 @@ Eridu is a C-Like Language featuring Abstract Data Types, Function Pointers, a C
 
 :pushpin: [Project Description](https://github.com/frederikgram/eridu/blob/master/projectdescription.pdf)
 
-:speech_balloon: The reader is advised to look at section *8* regarding performance evaluation in the attached thesis to get an overview of the viability of the language. 
+:speech_balloon: The reader is advised to look at section _8_ regarding performance evaluation in the attached thesis to get an overview of the viability of the language, as well as comparisons to C and C++.
 
 ---
 
