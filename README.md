@@ -17,7 +17,7 @@ It is possible to compile Eridu from source, by navigating to the `./dev/src` fo
 To use the compiler, the following command can be run:
 `./path/to/compiler < ./path/to/file.erd`.
 
-From here, the newly created `output.s` file can be constructed into a runnable by using `gcc`. Here it is important to not that the `-no-pie` flag for GCC is required when using strings.
+From here, the newly created `output.s` file can be constructed into a runnable by using `gcc`. Here it is important to note that the `-no-pie` flag for GCC is required when using strings.
 
 We advice the reader to test the following examples:
 - `./build/compiler < examples/generic_vehicle_simulator.erd`
@@ -38,6 +38,4 @@ And for a complete test pass, run:
 
 `python3 ./tests/gula.py -src ../build -path ./tests -verbose`
 ### How to perform benchmarking
-Benchmarking can be performed by running:
-
 `python3 ./benchmarks/utu.py -src ./build -path . -verbose`
