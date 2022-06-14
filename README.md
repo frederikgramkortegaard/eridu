@@ -16,7 +16,9 @@
 It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`, it is recommended to run `make clean` before any attempt to compile Eridu is recommended. 
 ### How to run examples (patterns etc.)
 To use the compiler, the following command can be run:
-`./path/to/compiler < ./path/to/file.erd`.
+```
+./path/to/compiler < ./path/to/file.erd
+```
 
 From here, the newly created `output.s` file can be constructed into a runnable by using `gcc`. Here it is important to note that the `-no-pie` flag for GCC is required when using strings.
 
