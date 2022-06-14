@@ -1,5 +1,4 @@
 # Eridu
-## C-Like Languages featuring support for abstract data types, a custom intermediate representation and optimized x86 ASM output.
 ## C-Like Language featuring Abstract Data Types, Function Pointers, a Custom Intermediate Representation and Optimized x86 AT&T ASM Output
 
 
