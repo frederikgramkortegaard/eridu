@@ -1,5 +1,6 @@
 # Eridu
-C-Like Languages featuring support for abstract data types, a custom intermediate representation and optimized x86 ASM output.
+## C-Like Languages featuring support for abstract data types, a custom intermediate representation and optimized x86 ASM output.
+
 
 :pushpin: [Thesis](https://github.com/frederikgram/eridu/blob/master/Thesis.pdf)
 
