@@ -5,7 +5,7 @@ C-Like Languages featuring support for abstract data types, a custom intermediat
 
 :pushpin: [Project Description](https://github.com/frederikgram/eridu/blob/master/projectdescription.pdf)
 
-NOTE: This compiler is only expected to work on Linux based distros such as Ubuntu. The correctness on other operating systems can not be guaranteed.
+:warning: This compiler is only expected to work on Linux based distros such as Ubuntu, and thus, the correctness on other operating systems can not be guaranteed.
 
 ## User Guide
 ### How to compile
