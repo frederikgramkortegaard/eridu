@@ -14,7 +14,7 @@
 
 ### How to compile
 It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`, it is recommended to run `make clean` before any attempt to compile Eridu. 
-### How to run examples (patterns etc.)
+### How to run the pre-made examples.
 To use the compiler, the following command can be run:
 ```
 ./path/to/compiler < ./path/to/file.erd
