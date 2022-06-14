@@ -27,8 +27,10 @@ We advice the reader to test the following examples:
 
 Followed by:
 
-```gcc -no-pie output.s
-./a.out```
+```
+gcc -no-pie output.s
+./a.out
+```
 ### Testing
 Tests can be run using our testing framework _Gula_, to use this framework, Python 3.8 and the numpy package is required. To see the help menu, use the command:
 
