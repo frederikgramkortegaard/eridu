@@ -13,7 +13,7 @@
 :warning: This compiler is only expected to work on Linux based distros such as Ubuntu, and thus, the correctness on other operating systems can not be guaranteed.
 
 ### How to compile
-It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`, it is recommended to run `make clean` before any attempt to compile Eridu is recommended. 
+It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`, it is recommended to run `make clean` before any attempt to compile Eridu. 
 ### How to run examples (patterns etc.)
 To use the compiler, the following command can be run:
 ```
