@@ -1,5 +1,5 @@
 # Eridu
-## C-Like Language featuring Abstract Data Types, Function Pointers, a Custom Intermediate Representation and Optimized x86 AT&T ASM Output
+### C-Like Language featuring Abstract Data Types, Function Pointers, a Custom Intermediate Representation and Optimized x86 AT&T ASM Output
 
 
 :pushpin: [Thesis](https://github.com/frederikgram/eridu/blob/master/Thesis.pdf)
