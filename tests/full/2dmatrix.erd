@@ -1,0 +1,15 @@
+
+// 10x10 2D int matrix
+
+int ** outer = allocate(int *, 10);
+int i = 0;
+
+while (i < 10) {
+    outer[i] = allocate(int, 10);
+    i = i + 1;
+};
+
+
+int * tmp = outer[1];
+tmp[0] = 1;
+print(tmp[0]);

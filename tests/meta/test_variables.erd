@@ -1,0 +1,21 @@
+
+
+define int main(){
+
+    int * a = allocate(int, 3);
+    int * b = allocate(int, 3);
+    print(a);
+    print(b);
+    print(a);
+    print(b);
+    return 0;
+
+};
+main();
+
+//%% OUTPUT
+//$$1
+//$$2
+//$$1
+//$$2
+//%% END

@@ -1,0 +1,27 @@
+
+struct kek = {
+    int a,
+    int ** b,
+};
+
+struct lol = {
+    struct kek * struct_ptr
+};
+
+struct kek * data = allocate(struct kek, 1);
+
+int * ptr = allocate(int, 1);
+dereference(ptr) = 6;
+data.b = allocate(int *, 5);
+int ** arr = data.b;
+arr[0] = ptr;
+
+int ** arr2 = data.b;
+print(dereference(arr2[0]));
+
+struct lol * data2 = allocate(struct lol, 1);
+data2.struct_ptr = data;
+
+struct kek * tmp = data2.struct_ptr;
+int ** arr3 = tmp.b;
+print(dereference(arr3[0]));

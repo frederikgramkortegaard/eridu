@@ -1,0 +1,14 @@
+int a = 5;
+main();
+
+define int main() {
+
+    print(a);
+    a = 10.0;
+    print(a);
+    float a = 6.6;
+    print(a);
+
+    return 0;
+
+};

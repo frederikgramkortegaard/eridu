@@ -1,0 +1,13 @@
+
+struct MyStruct = {
+    int a,
+    char b,
+    float c,
+    str d,
+};
+
+
+
+define int func(struct MyStruct * hej) {
+    return hej.a;
+};

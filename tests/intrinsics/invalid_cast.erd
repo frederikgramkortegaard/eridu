@@ -1,0 +1,13 @@
+/* Ensure that types.c finds invalid cast calls */
+
+int a;
+float b;
+char c;
+
+cast(char, 5);
+cast(int, 'P');
+cast(char, b);
+
+//%% OUTPUT
+//$$error
+//%% END

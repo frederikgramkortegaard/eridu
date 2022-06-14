@@ -1,0 +1,16 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+IndentWidth: 4
+ColumnLimit: 128
+AlignEscapedNewlines: true
+AlignTrailingComments: true
+IndentPPDirectives: AfterHash
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterCaseLabel: false
+    AfterFunction: false
+    AfterStruct: false
+DerivePointerAlignment: false
+PointerAlignment: Middle
+MaxEmptyLinesToKeep: 2

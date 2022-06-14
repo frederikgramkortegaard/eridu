@@ -1,0 +1,26 @@
+
+struct MyStruct = {
+    int a
+};
+struct TheirStruct = {
+    float b,
+    int c,
+};
+struct MyStruct * a = allocate(struct MyStruct, 1);
+struct TheirStruct * b = allocate(struct TheirStruct, 1);
+struct MyStruct * c = allocate(struct MyStruct, 1);
+
+if (a == c) {
+    print(0); // Activates, as they are named equivalent.
+};
+
+if(b == c) {
+    print(1); // Does not activate
+};
+
+print(2);
+
+//%% OUTPUT
+//0
+//2
+//%% END

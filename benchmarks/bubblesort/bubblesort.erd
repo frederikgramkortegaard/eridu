@@ -1,0 +1,82 @@
+define int bubblesort(int * arr, int size) {
+
+    int i = 0;
+    int j = 0;
+    int tmp;
+
+    while(i < size - 1) {
+
+        while(j < size - i - 1) {
+
+            if(arr[j] > arr[j + 1]) {
+                tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
+            };
+
+            j = j + 1;
+
+        };
+        i = i + 1;
+        j = 0;
+    };
+    return 0;
+};
+
+int * arr = allocate(int, 50);
+
+arr[0] = 64;
+arr[1] = 34;
+arr[2] = 25;
+arr[3] = 12;
+arr[4] = 22;
+arr[5] = 11;
+arr[6] = 90;    
+arr[7] = 4;
+arr[8] = 9;
+arr[9] = 1;
+arr[10] = 33;
+arr[11] = 23;
+arr[12] = 420;
+arr[13] = 54;
+arr[14] = 153;
+arr[15] = 200;
+arr[16] = 1000;
+arr[17] = 400;
+arr[18] = 323;
+arr[19] = 911;
+
+arr[20] = 1000;
+arr[21] = 999;
+arr[22] = 998;
+arr[23] = 997;
+arr[24] = 996;
+arr[25] = 995;
+arr[26] = 994;
+arr[27] = 993;
+arr[28] = 992;
+arr[29] = 991;
+arr[30] = 990;
+arr[31] = 989;
+arr[32] = 988;
+arr[33] = 987;
+arr[34] = 986;
+arr[35] = 985;
+arr[36] = 984;
+arr[37] = 983;
+arr[38] = 982;
+arr[39] = 981;
+arr[40] = 980;
+arr[41] = 979;
+arr[42] = 978;
+arr[43] = 977;
+arr[44] = 976;
+arr[45] = 975;
+arr[46] = 974;
+arr[47] = 973;
+arr[48] = 972;
+arr[49] = 971;
+
+
+
+bubblesort(arr, 50);

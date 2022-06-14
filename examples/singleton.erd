@@ -1,0 +1,60 @@
+
+
+struct Logger = {
+    int a,
+    int b,
+    int c,
+};
+
+define struct Logger * construct_logger(int a, int b, int c) {
+    struct Logger * this = allocate(struct Logger , 1);
+    
+    this.a = 1;
+    this.b = 2;
+    this.c = 3;
+
+    print("Constructing a Logger Object structure");
+
+    return this;
+
+};
+
+struct LoggerSingleton = {
+    int has_singleton,
+    struct Logger * logger,
+    <struct Logger *> callable<int, int, int> constructor,
+};
+
+define struct LoggerSingleton * singleton_constructor() {
+    struct LoggerSingleton * this = allocate(struct LoggerSingleton , 1);
+    this.has_singleton = 0;
+    this.constructor = construct_logger;
+    return this;
+};
+
+define struct Logger * get_singleton(struct LoggerSingleton * singleton) {
+
+    if(singleton.has_singleton == 1) {
+        print("Singleton already has a context object");
+        return singleton.logger;
+    };
+
+    // Unpack Callable
+    <struct Logger *> callable<int, int, int> c = singleton.constructor;
+
+    // Default values for instantiation.
+    singleton.logger = c(1,2,3);
+    singleton.has_singleton = 1;
+
+    return singleton.logger;
+
+};
+
+struct LoggerSingleton * singleton = singleton_constructor();
+
+struct Logger * logger1 = get_singleton(singleton);
+struct Logger * logger2 = get_singleton(singleton);
+
+if(logger1 == logger2) {
+    print("Context Objects are the same");
+};

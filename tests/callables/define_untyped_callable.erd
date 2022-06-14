@@ -1,0 +1,11 @@
+define int func() {
+    return 0;
+};
+
+callable a = func;
+int b = a();
+print(b);
+
+//%% OUTPUT
+//0
+//%% END

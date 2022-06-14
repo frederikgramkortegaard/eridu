@@ -1,0 +1,55 @@
+int ** arr = allocate(int* , 5);
+int size = 5;
+int i = 0;
+while (i < size) {
+    int * ptr = allocate(int , 1);
+    dereference(ptr) = i+1;
+    arr[i] = ptr;
+
+
+    print("Checking if addresses are the same for pointer and array index: ");
+    print(ptr);
+    print(arr[i]);
+
+    print("Checking stored values in ptr and array");
+    print(dereference(ptr));
+    print(dereference(arr[i]));
+
+    i = i +1;
+};
+
+print("");
+print("");
+
+<int> callable <int> func_ptr;
+
+define int add1(int var) {
+    return var+1;
+};
+
+define int map(int ** arr, int size, <int> callable <int> func) {
+    int i = 0;
+    while (i < size) {
+
+        print("Value and address of current array index:");
+        print(dereference(arr[i]));
+        print(arr[i]);
+        dereference(arr[i]) = func(dereference(arr[i]));
+        i = i + 1;
+    };
+    return 0;
+};
+
+
+
+func_ptr = add1;
+map(arr, size, func_ptr);
+print("");
+print("");
+i = 0;
+while (i < size) {
+    print("Value and address of current array index after map:");
+    print(dereference(arr[i]));
+    print(arr[i]);
+    i = i + 1;
+};

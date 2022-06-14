@@ -1,0 +1,9 @@
+define int main(){
+    print("Expected outcome");
+    return 0;
+};
+main();
+
+//%% OUTPUT
+//Expected outcome
+//%% END

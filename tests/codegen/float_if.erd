@@ -1,0 +1,28 @@
+float b = 5.0;
+float a = 6.0;
+if(a > b) {
+    print("Works less");
+};
+
+if(b < a) {
+    print("Works greater");
+};
+
+if(a >= b) {
+    print("Works less equal");
+};
+
+if(b <= a) {
+    print("Works greater equal");
+};
+
+
+if(a != b) {
+    print("Works nequal");
+};
+
+a = b;
+
+if(a == b) {
+    print("Works equal");
+};

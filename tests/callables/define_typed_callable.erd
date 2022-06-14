@@ -1,0 +1,7 @@
+define int func(int a) {
+    return a;
+};
+
+<int> callable<int> test;
+test = func;
+print(test(1));

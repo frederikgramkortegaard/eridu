@@ -1,0 +1,5 @@
+int age = 5;
+age = 3;
+
+
+print(age);

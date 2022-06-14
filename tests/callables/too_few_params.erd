@@ -1,0 +1,14 @@
+
+define int some(int thing) {
+
+    return 4 + thing;
+
+};
+
+int a = some();
+print(a);
+
+//%% OUTPUT
+//$$error
+//%% END
+

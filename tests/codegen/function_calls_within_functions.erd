@@ -1,0 +1,20 @@
+int a;
+a = 5;
+
+define int outer(int k) {
+    return inner(k);
+};
+
+define int inner(int n) {
+    return inner_inner(n);
+};
+
+define int inner_inner(int x) {
+    return inner_inner_inner(x);
+};
+
+define int inner_inner_inner(int y) {
+    return y+5;
+};
+
+print(outer(a));

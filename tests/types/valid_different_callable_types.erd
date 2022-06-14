@@ -1,0 +1,3 @@
+<int> callable <int, int> call_a;
+<int> callable call_b;
+callable call_c;

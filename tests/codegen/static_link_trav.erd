@@ -1,0 +1,18 @@
+int a;
+a = 5;
+{
+    int b;
+    b = 5;
+    print(a);
+    {
+        print(a);
+        {
+            print(a);
+            {
+                a = a + b;
+                print(a);
+            };
+        };
+        
+    };
+};

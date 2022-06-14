@@ -1,0 +1,12 @@
+
+define int ** resize(int ** arr, int size, int newsize) {
+    int ** newarr = allocate(int *, newsize);
+    int i = 0;
+    while(i<size) {
+        newarr[i] = arr[i];
+        i = i + 1;
+    };
+
+    return newarr;
+};
+

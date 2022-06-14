@@ -1,0 +1,15 @@
+
+
+define int main(){
+
+    int * a = allocate(int, 3);
+    int * b = allocate(int, 3);
+    print(addressof(a[0]));
+    return 0;
+
+};
+main();
+
+//%% OUTPUT
+//$$segfault
+//%% END

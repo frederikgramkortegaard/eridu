@@ -1,0 +1,18 @@
+
+int a = 4;
+
+// Simple Decl
+struct MyStruct = {
+    int a,
+    char b,
+};
+
+
+struct TheirStruct = {
+    int a,
+    char b,
+};
+
+struct MyStruct * hej = allocate(struct MyStruct, 1);
+struct MyStruct * hej2 = allocate(struct MyStruct, 1);
+struct TheirStruct * lol = allocate(struct TheirStruct, 1);

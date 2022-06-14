@@ -1,0 +1,22 @@
+// This should segfault if it is not given any arguments
+
+str * arguments;
+str arg1 = arguments[1];
+print('\0');
+int i = 0;
+print("Printing string");
+print(arg1);
+
+print(string_length(arg1));
+
+define int string_length(str string) {
+    int size = 0;
+    while (string[size] != '\0') {
+        size = size + 1;
+    };
+    return size;
+};
+
+//%% OUTPUT
+//$$segfault
+//%% END

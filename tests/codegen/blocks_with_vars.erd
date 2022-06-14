@@ -1,0 +1,17 @@
+int a;
+int b;
+a = 4;
+b = 5;
+print(a+b);
+{
+    float c;
+    float d;
+    c = 5.0;
+    d = 3.0;
+    print(c-d);
+    {
+        char k;
+        k = 'c';
+        print(k);
+    };
+};

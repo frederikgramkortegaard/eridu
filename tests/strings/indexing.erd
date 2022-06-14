@@ -1,0 +1,18 @@
+
+
+str name = "frederik";
+char f = name[0];
+print(f);
+ 
+int * arr = allocate(int, 5);
+arr[0] = 4;
+arr[1] = 5;
+print(dereference(arr));
+
+
+int ** matrix2d = allocate(int *, 5);
+int i = 0;
+while (i <5) {
+    matrix2d[i] = allocate(int, 5);
+    i = i + 1;
+};

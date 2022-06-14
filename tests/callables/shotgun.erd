@@ -1,0 +1,52 @@
+<int> callable <int, int> a;
+
+define int func(int b, int c) {
+    print("Adding integers");
+    return b+c;
+};
+
+define int func2(int b, int c) {
+    print("Multiplying integers");
+    return b*c;
+};
+
+define float func3(float b, float c) {
+    print("Adding floats");
+    return b+c;
+};
+a = func;
+print(a(4, 6));
+
+a = func2;
+print(a(4, 6));
+
+<int> callable <int, int> b;
+
+
+callable * c;
+
+
+<float> callable <float, float> d;
+<float> callable <float, float> e;
+
+e = func3;
+c = addressof(a);
+b = dereference(c);
+
+print(b(5,7));
+
+c = addressof(e);
+d = dereference(c);
+
+print(d(5.0,7.0));
+
+//%% OUTPUT
+//Adding integers
+//10
+//Multiplying integers
+//24
+//Multiplying integers
+//35
+//Adding floats
+//12.000000
+//%% END

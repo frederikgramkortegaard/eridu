@@ -1,0 +1,14 @@
+
+int a;
+
+{
+    int b;
+};
+
+define int c(float d, int h){
+    return cast(int, d);
+};
+
+a = 5;
+int b = 8;
+a = a + b;

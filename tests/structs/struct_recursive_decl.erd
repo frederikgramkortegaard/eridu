@@ -1,0 +1,14 @@
+
+// Recursive Decl
+struct MyStruct = {
+    int a,
+    char b,
+    float c,
+    str d,
+    struct MyStruct * e
+};
+
+
+struct MyStruct * hej = allocate(struct MyStruct, 1);
+hej.a = 5;
+print(hej.a);

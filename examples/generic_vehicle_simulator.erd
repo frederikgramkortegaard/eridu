@@ -1,0 +1,91 @@
+
+
+struct Vehicle = {
+    str name,
+    <int> callable <struct Vehicle * > simulate,
+};
+
+
+define int _simulate_t45_model_90(struct Vehicle * t45) {
+
+    // Simulate the model
+
+    // Dummy test
+    str name = t45.name;
+    if (name[0] == 'T') {
+        return 1;
+    };
+
+    return 0;
+};
+
+define int _ariane(struct Vehicle * ariane) {
+
+    // Simulate the model
+
+    // Dummy test
+    str name = ariane.name;
+    if (name[0] == 'A') {
+        return 1;
+    };
+
+    return 0;
+};
+
+define struct Vehicle * make_t45_model_90() {
+
+    struct Vehicle * this = allocate(struct Vehicle, 1);
+    this.name = "T-45m90";
+    this.simulate = _simulate_t45_model_90;
+    return this;
+};
+
+define struct Vehicle * make_ariane_srb_delta2() {
+
+    struct Vehicle * this = allocate(struct Vehicle, 1);
+    this.name = "Ariane SRB Delta 2";
+    this.simulate = _ariane;
+    return this;
+};
+
+define int simulate(struct Vehicle ** vehicles, int size) {
+
+    int idx = 0; 
+    callable sim;
+    struct Vehicle * vehicle;
+    while(idx < size) {
+        vehicle = vehicles[idx];
+        sim = vehicle.simulate;
+
+        int result = sim(vehicle);
+        if(result != 1) {
+            return 0;
+        };
+
+        idx = idx + 1;
+    };
+    return 1;
+
+};
+
+define int main() {
+
+    int num_vehicles = 2;
+    struct Vehicle ** vehicles = allocate(struct Vehicle *, num_vehicles);
+
+
+    struct Vehicle * t45 = make_t45_model_90();
+    struct Vehicle * ariane = make_ariane_srb_delta2();
+
+    vehicles[0] = t45;
+    vehicles[1] = ariane;
+
+    if(simulate(vehicles, num_vehicles) == 1) {
+        print("All vehicles simulated successfully");
+        return 1;
+    };
+
+    print("A vehicle didn't work");
+    return 0;
+};
+main();

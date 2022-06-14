@@ -1,0 +1,8 @@
+while(2 < 5) {
+    break;
+};
+
+print(1);
+//%% OUTPUT
+//1
+//%% END

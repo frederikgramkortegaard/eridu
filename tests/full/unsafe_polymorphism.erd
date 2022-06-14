@@ -1,0 +1,25 @@
+
+define int * realloc(int * a, int newsize) {
+    int * b = allocate(int, newsize);
+    int i = 0;
+    while(i < newsize) {
+        b[i] = a[i];
+        i = i + 1;
+    };
+
+    return b;
+};
+
+callable unsafe_realloc = realloc;
+
+
+float * b = allocate(float, 5);
+b = unsafe_realloc(b, 10);
+
+b[0] = 1.0;
+b[1] = 2.0;
+b[2] = 3.0;
+b[3] = 4.0;
+b[4] = 5.0;
+print(b[2]);
+

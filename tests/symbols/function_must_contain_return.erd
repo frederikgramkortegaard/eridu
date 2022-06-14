@@ -1,0 +1,6 @@
+
+
+define int func(){
+
+    return 1;
+};

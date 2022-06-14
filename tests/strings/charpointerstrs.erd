@@ -1,0 +1,8 @@
+char * a = "frederik";
+
+
+
+str b = a;
+if(a == b) { // FALSE
+    print(1);
+};

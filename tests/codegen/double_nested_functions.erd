@@ -1,0 +1,28 @@
+int a;
+a = 5;
+
+int b;
+b = 6;
+
+define int c(int g, int k, int m) {
+    print(g);
+    print(k);
+    print(m);
+
+    define int n(int x) {
+        print(x);
+    
+        define int y(int h) {
+            print(h);
+            return h;
+    
+        };
+        return y(x);
+
+    
+    };
+    return g+k+n(m);
+
+};
+
+print(c(a,b,b+1));

@@ -1,0 +1,13 @@
+
+struct MyStruct = {
+    int a,
+    float b,
+    struct MyStruct * c
+};
+
+
+int a = sizeof(struct MyStruct);
+print(a);
+//%% OUTPUT
+//3
+//%% END

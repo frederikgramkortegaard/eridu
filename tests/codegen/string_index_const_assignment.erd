@@ -1,0 +1,5 @@
+str string = allocate(char, 5);
+char b = 'b';
+string[0] = 'l';
+string[1] = b;
+print(string);

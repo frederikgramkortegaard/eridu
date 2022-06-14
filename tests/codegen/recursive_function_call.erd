@@ -1,0 +1,13 @@
+int a;
+a = 10;
+
+define int b(int c) {
+    if (c == 1) {
+        return c;
+    };
+    print(c);
+    c = c - 1;
+    return b(c);
+};
+
+print(b(a));

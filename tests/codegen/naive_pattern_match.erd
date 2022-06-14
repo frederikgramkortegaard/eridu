@@ -1,0 +1,43 @@
+// Eridu program for Naive Pattern Searching algorithm
+ 
+define int search(str pat, str txt)
+{
+    int M = string_length(pat);
+    int N = string_length(txt);
+    // A loop to slide pat[] one by one 
+    int i = 0;
+    while(i <= N - M) {
+        int j = 0;
+        //For current index i, check for pattern match
+        while(j < M) {
+            if (txt[i + j] != pat[j]) {
+                break;
+            };
+            j = j + 1;
+        };
+
+        if (j == M) { // if pat[0...M-1] = txt[i, i+1, ...i+M-1]
+                print("found at index :");
+                print(i);
+        };
+
+        i = i + 1;
+    };
+
+    return 0;
+};
+
+char * txt = "AABAACAADAABAAABAA";
+char * pat = "AABA";
+search(pat, txt);
+
+
+
+// Looks for an end-of-line char in the string, incrimenting an integer for each index reached before the end-of-line char
+define int string_length(str string) {
+    int size = 0;
+    while (string[size] != '\0') {
+        size = size + 1;
+    };
+    return size;
+};

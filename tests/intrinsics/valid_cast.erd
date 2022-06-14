@@ -1,0 +1,18 @@
+// Ensure that valid cast operators
+
+int a;
+float c;
+
+c = cast(float, 4);
+
+// Nested casting
+
+a = cast(int, cast(float, 5));
+
+print(a);
+print(c);
+
+//%% OUTPUT
+//5
+//4.000000
+//%% END

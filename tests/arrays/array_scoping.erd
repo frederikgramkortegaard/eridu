@@ -1,0 +1,64 @@
+int ** arr = allocate(int* , 5);
+int size = 5;
+int i = 0;
+while (i < size) {
+    int * ptr = allocate(int , 1);
+    dereference(ptr) = i+1;
+    arr[i] = ptr;
+    print(ptr);
+    print(arr[i]);
+    print(dereference(ptr));
+    print(dereference(arr[i]));
+
+    i = i + 1;
+};
+define int func() {
+    i = 0;
+    int q = i + 1;
+    print(arr[i]);
+    print(dereference(arr[i]));
+    print(arr[q]);
+    print(dereference(arr[q]));
+    int * ptr = allocate(int , 1);
+    dereference(ptr) = 65;
+    arr[i] = ptr;
+    dereference(arr[q]) = dereference(ptr);
+    print(arr[i]);
+    print(dereference(arr[i]));
+    print(arr[q]);
+    print(dereference(arr[q]));
+    return 0;
+
+};
+func();
+
+//%% OUTPUT
+//$$1
+//$$1
+//1
+//1
+//$$2
+//$$2
+//2
+//2
+//$$3
+//$$3
+//3
+//3
+//$$4
+//$$4
+//4
+//4
+//$$5
+//$$5
+//5
+//5
+//$$1
+//1
+//$$2
+//2
+//$$6
+//65
+//$$2
+//65
+//%% END

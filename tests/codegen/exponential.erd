@@ -1,0 +1,22 @@
+// Eridu Efficient program to calculate
+// e raise to the power x
+
+ 
+// Returns approximate value of e^x
+// using sum of first n terms of Taylor Series
+define float exponential(int n, float x)
+{
+    float sum = 1.0; // initialize sum of series
+    int i = n - 1;
+    while(i > 0) {
+        sum = 1.0 + x * sum / cast(float, i);
+        i = i - 1;
+    };
+    return sum;
+};
+ 
+// Driver program to test above function
+ int n = 10;
+    float x = 1.0;
+    print(exponential(n, x));
+

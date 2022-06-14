@@ -1,0 +1,16 @@
+
+
+struct MyStruct = {
+    int a,
+    float b
+};
+
+
+struct MyStruct * data = allocate(struct MyStruct, 1);
+
+data.a = 5;
+data.b = cast(float, data.a);
+
+print(data.a);
+print(data.b);
+

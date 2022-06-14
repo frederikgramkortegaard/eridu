@@ -1,0 +1,6 @@
+
+int a;
+a = 7;
+define int test()  {
+    return a;
+};

@@ -1,0 +1,27 @@
+int ** arr; 
+arr = allocate(int *, 5);
+int * ptr = allocate(int, 1);
+dereference(ptr) = 11;
+int * ptr2 = allocate(int, 1);
+arr[0] = ptr;
+print(dereference(arr[0]));
+arr[1] = ptr2;
+define int func(int ** arr2) {
+    int * ptr = allocate(int , 1);
+    dereference(ptr) = 10;
+
+    arr2[1] = ptr;
+    //print(arr2[0]);
+    dereference(arr2[0]) = 6; 
+    //print(arr2[0]);
+    //print(dereference(arr2[0]));
+    //dereference(arr2[0]) = 6;
+    //print(dereference(arr2[0]));
+    print(arr2[1]);
+    return dereference(arr2[1]);
+};
+//print(arr[0]);
+print(func(arr));
+print(arr[1]);
+print(dereference(arr[1]));
+print(dereference(arr[0]));

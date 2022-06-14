@@ -1,0 +1,18 @@
+int a;
+a = 5;
+print(a);
+int b;
+b = 6;
+print(b);
+define int c(int g, int k, int m) {
+    g = a + 1;
+    a = a + 1;
+    print(g);
+    print(k);
+    print(m);
+    return g+k+m;
+};
+
+print(c(a,b,b+1));
+
+print(a);

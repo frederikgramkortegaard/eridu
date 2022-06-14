@@ -1,0 +1,107 @@
+struct Iterator = {
+    char ** values,
+    int    size,
+    int current,
+    <str> callable <struct Iterator *> next,
+
+};
+
+// Typical linear next function
+define str _next(struct Iterator * iter) {
+    if (iter.current < iter.size) {
+        char ** values = iter.values;
+        iter.current = iter.current + 1;
+        return values[iter.current - 1];
+    };
+
+    return "";
+};
+
+// Next is the first element larger than the current
+define str _next_larger(struct Iterator * iter) {
+    str * values = iter.values; 
+    int current = iter.current;
+    int current_size = string_length(values[current]);
+    int idx = iter.current;
+
+    while (idx < iter.size) {
+        int next_size = string_length(values[idx]);
+        if(next_size > current_size) {
+            iter.current = idx;
+            return values[idx];
+        };
+
+        idx = idx + 1;
+    };
+
+    idx = iter.current;
+    return values[idx];
+};
+
+
+define struct Iterator * create_iterator(char ** values, int size) {
+
+    struct Iterator * iter = allocate(struct Iterator, 1);
+
+    iter.values = values;
+    iter.size = size;
+    iter.current = 0;
+    iter.next = _next;
+    return iter;
+
+};
+
+define int main() {
+
+    // Create dummy data
+    str * names = allocate(str, 5);
+    names[0] = "Michael";
+    names[1] = "Peter";
+    names[2] = "Hamurabe";
+    names[3] = "Wolfeschlegelsteinhausenbergerdorff";
+    names[4] = "Jackson";
+
+    struct Iterator * iter = create_iterator(names, 5);
+
+    // Default iterator is a linear iterator
+    iter.next = _next;
+    callable next = iter.next;
+
+    str a = next(iter);
+    print(a); // Michael
+    a = next(iter);
+    print(a); // Peter
+
+    // Test "next larger" iterator, starting from "Michael"
+    iter.next = _next_larger;
+    next = iter.next;
+    iter.current = 0;
+
+    str b = next(iter);
+    print(b); // Hamurabe
+    b = next(iter);
+    print(b); // Wolfeschlegelsteinhausenbergerdorff
+
+    return 0;
+};
+
+
+main();
+
+//%% OUTPUT
+//Michael
+//Peter
+//Hamurabe
+//Wolfeschlegelsteinhausenbergerdorff
+//%% END
+
+
+//  ---- Utils ----
+
+define int string_length(str string) {
+    int size = 0;
+    while (string[size] != '\0') {
+        size = size + 1;
+    };
+    return size;
+};

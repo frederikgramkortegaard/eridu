@@ -1,0 +1,59 @@
+
+
+print("Testing equal to");
+
+int i = 0;
+if (i == 0) {
+    print(i);
+};
+
+print("");
+
+
+print("Testing equal to");
+
+i = 1;
+if (i != 0) {
+    print(i);
+};
+
+print("");
+
+
+print("Testing less than");
+
+i = 0;
+if (i < 1) {
+    print(i);
+};
+
+print("");
+
+
+print("Testing greater than");
+
+i = 1;
+if (i > 0) {
+    print(i);
+};
+
+print("");
+
+print("Testing less than or equal to");
+
+i = 0;
+if (i <= 0) {
+    print(i);
+};
+
+print("");
+
+
+print("Testing greater than or equal to");
+
+i = 1;
+if (i >= 1) {
+    print(i);
+};
+
+print("");

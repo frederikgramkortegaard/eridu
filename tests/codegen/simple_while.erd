@@ -1,0 +1,62 @@
+
+
+print("Testing n_equal");
+
+int i = 10;
+while (i != 0) {
+    print(i);
+    i = i - 1;
+};
+
+print("");
+
+print("Testing equal");
+
+i = 10;
+while (i == 10) {
+    print(i);
+    i = i - 1;
+};
+
+print("");
+
+print("Testing less than");
+
+i = 10;
+while (i > 0) {
+    print(i);
+    i = i - 1;
+};
+
+print("");
+
+
+print("Testing greater than");
+
+i = 0;
+while (i < 10) {
+    print(i);
+    i = i + 1;
+};
+
+print("");
+
+print("Testing greater than or equal to");
+
+i = 0;
+while (i <= 10) {
+    print(i);
+    i = i + 1;
+};
+
+print("");
+
+print("Testing less than or equal to");
+
+i = 10;
+while (i >= 0) {
+    print(i);
+    i = i - 1;
+};
+
+print("");

@@ -1,0 +1,53 @@
+int ** arr = allocate(int *, 5);
+int size = 5;
+
+int i = 0;
+while (i < size) {
+    int * ptr = allocate(int , 1);
+    dereference(ptr) = i;
+    arr[i] = ptr;
+
+
+    print("Checking if addresses are the same for pointer and array index: ");
+    print(ptr);
+    print(arr[i]);
+
+    print("Checking stored values in ptr and array");
+    print(dereference(ptr));
+    print(dereference(arr[i]));
+
+    i = i +1;
+};
+
+//%% OUTPUT
+//Checking if addresses are the same for pointer and array index:
+//$$1
+//$$1
+//Checking stored values in ptr and array
+//0
+//0
+//Checking if addresses are the same for pointer and array index:
+//$$2
+//$$2
+//Checking stored values in ptr and array
+//1
+//1
+//Checking if addresses are the same for pointer and array index:
+//$$3
+//$$3
+//Checking stored values in ptr and array
+//2
+//2
+//Checking if addresses are the same for pointer and array index:
+//$$4
+//$$4
+//Checking stored values in ptr and array
+//3
+//3
+//Checking if addresses are the same for pointer and array index:
+//$$5
+//$$5
+//Checking stored values in ptr and array
+//4
+//4
+// %% END

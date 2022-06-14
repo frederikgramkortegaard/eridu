@@ -1,0 +1,40 @@
+
+
+
+struct MyStruct = {
+    int a,
+    int * b,
+    struct MyStruct * recursive
+};
+
+int * arr = allocate(int, 10);
+arr[0] = 4;
+print(arr[0]);
+
+struct MyStruct * s = allocate(struct MyStruct, 1);
+s.b = arr;
+
+
+define int addOne(int x) {
+    return x + 1;
+};
+
+callable random = addOne;
+
+int a = random(1,2,3,4,5);
+print(a);
+
+callable * randomstuff = allocate(callable, 5);
+randomstuff[0] = addOne;
+
+callable x = randomstuff[0];
+
+int * g = allocate(int, 1);
+
+while(g[0] < 10) {
+    g[0] = g[0] + 1;
+    print(g[0]);
+};
+
+print(dereference(g));
+

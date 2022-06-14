@@ -1,0 +1,22 @@
+// Various Array Declaration Tests
+// The real test here is not to segfault
+
+
+
+int * a = allocate(int, 5);
+int ** b = allocate(int *, 5);
+
+int idx = 0;
+while (idx < 5) {
+    b[idx] = allocate(int, 5);
+    idx = idx + 1;
+};
+
+int * c = b[0];
+c[0] = 1;
+
+print(c[0]);
+
+//%% OUTPUT
+//1
+//%% END

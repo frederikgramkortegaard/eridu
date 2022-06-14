@@ -1,0 +1,21 @@
+
+struct ExampleStruct = {
+    int a,
+    char b,
+    float c,
+    };
+
+int size = sizeof(
+    struct ExampleStruct
+);
+print(size); // 3
+
+int is_castable = castable(int, 4.4);
+print(is_castable); // 1
+
+int * array = allocate(int, 10); // Allocate 10 ints
+int ** matrix = allocate(int *, 10); // Allocate 10 pointers to ints
+
+int * ptr = allocate(int , 1); // Allocate 1 int
+dereference(ptr) = 1; // Set the value of the int to 1
+print(dereference(ptr)); // 1

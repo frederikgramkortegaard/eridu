@@ -1,0 +1,47 @@
+str * arguments;
+str c = concat(arguments[1], arguments[2]);
+print(c);
+
+define str concat(str first, str second) {
+    str result = allocate(char, string_length(first) + string_length(second) + 1 );
+
+    int i = 0;
+    while (i < string_length(first)) {
+        result[i] = first[i];
+
+
+        i = i + 1;
+    };
+    i = 0;
+    int q = string_length(first);
+    while (i < string_length(second)) {
+        result[q] = second[i];
+
+
+        q = q + 1;
+        i = i + 1;
+    };
+
+    int size = string_length(first) + string_length(second);
+    result[size + 1] = '\0'; // Add null terminator before returning
+
+    size = size + 1;
+
+    i = 0;
+    while (result[i] != '\0') {
+
+        i = i + 1;
+    };
+
+    return result;
+};
+
+
+// Looks for an end-of-line char in the string, incrimenting an integer for each index reached before the end-of-line char
+define int string_length(str string) {
+    int size = 0;
+    while (string[size] != '\0') {
+        size = size + 1;
+    };
+    return size;
+};

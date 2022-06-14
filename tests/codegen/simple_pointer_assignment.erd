@@ -1,0 +1,7 @@
+int a = 5;
+int * test;
+test = addressof(a);
+
+print(dereference(test));
+print(addressof(a));
+print(test);

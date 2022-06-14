@@ -1,0 +1,16 @@
+
+
+struct MyStruct = {
+    char **a,
+    char b
+};
+
+struct MyStruct * hej;
+char ** arr;
+hej.a = arr;
+
+
+
+//%% OUTPUT
+//$$segfault
+//%% END

@@ -1,0 +1,53 @@
+
+
+define int min(int a, int b) {
+    if (a < b) {
+        return a;
+    };
+
+    return b;
+    
+};
+
+// Newly allocated memory is set to 0 automatically
+define int * resize(int * arr, int size, int newsize) {
+
+    int * tmp = allocate(int, newsize);
+    int idx = 0;
+    while (idx < min(size, newsize)) {
+        tmp[idx] = arr[idx];
+        idx = idx + 1;
+    };
+
+    return tmp;
+
+};
+
+int * arr = allocate(int, 5);
+
+arr[0] = 0;
+arr[1] = 1;
+arr[2] = 2;
+arr[3] = 3;
+arr[4] = 4;
+
+arr = resize(arr, 5, 10);
+
+int idx = 0;
+while(idx < 10) {
+    print(arr[idx]);
+    idx = idx + 1;
+};
+
+//%% OUTPUT
+//0
+//1
+//2
+//3
+//4
+//0
+//0
+//0
+//0
+//0
+//%% END

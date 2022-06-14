@@ -1,0 +1,13 @@
+
+
+int b = 10;
+print(b);
+b = reduce_to_one(b);
+print(b);
+
+define int reduce_to_one(int a ){
+    while (a != 1) {
+        a = a - 1;
+    };
+    return a;
+};

@@ -1,0 +1,14 @@
+int a;
+a = 5;
+
+int b;
+b = 5;
+
+define int c(int g, int k, int m) {
+    define int n(int x) {
+        return x;
+    };
+    return g+k+n(m);
+};
+
+print(c(a,b,b));

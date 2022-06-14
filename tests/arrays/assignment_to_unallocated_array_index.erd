@@ -1,0 +1,15 @@
+
+
+
+int ** arr;
+arr = allocate(int *, 2);
+
+// arr[0] is a pointer, if we try
+// to insert a value into a non-allocated
+// address, we will segfault during runtime
+dereference(arr[0]) = 1;
+
+
+//%% OUTPUT
+//$$segfault
+//%% END

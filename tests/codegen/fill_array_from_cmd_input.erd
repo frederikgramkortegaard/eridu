@@ -1,0 +1,178 @@
+str * arguments;
+str input = arguments[2];
+print(input);
+int input_size = number_string_to_int(arguments[1]);
+print(input_size);
+print("");
+int * array = fill_array_from_input(input, input_size);
+
+int i = 0;
+while (i < input_size) {
+    print(array[i]);
+    i = i + 1;
+};
+
+define int * fill_array_from_input(str input, int input_size) {
+    int * array = allocate(int, input_size);
+
+    int i = 0;
+    int str_len = string_length(input);
+    int q = 0;
+
+    while (i < str_len) {
+
+        // Numbers are comma seperated so we check for this
+        if (input[i] == ',') {
+            i = i + 1;
+            //continue;
+        };
+        // We also skip blank spaces
+        if (input[i] == ' ') {
+            i = i + 1;
+            //continue;
+        };
+        str next_num = get_next_num(input, i);
+
+        array[q] = number_string_to_int(next_num);
+
+        int size_num = 0;
+        int x = i;
+        while (input[x] != ',') {
+            if (input[x] == '\0') {
+                break;
+            };
+
+            size_num = size_num + 1;
+            x = x + 1;
+        };
+
+        q = q + 1;
+        i = i + size_num;
+    };
+
+    return array;
+};
+
+define str get_next_num(str comma_number, int index) {
+
+    int size_num = 0;
+    int tmp = index;
+    while (comma_number[tmp] != ',') {
+        if (comma_number[tmp] == '\0') {
+            break;
+        };
+        size_num = size_num + 1;
+        tmp = tmp + 1;
+    };
+    //print("Printing size of input string");
+    //print(size_num);
+
+    str num = allocate(char, size_num);
+    
+    int i = 0;
+    while(i < size_num) {
+        num[i] = comma_number[index];
+        index = index + 1;
+        i = i + 1;
+    };
+    //print(num);
+    return num;
+
+};
+
+
+// Takes a string and converts it to an integer if possible, otherwise, behaviour is undefined
+define int number_string_to_int(str number)  {
+    int multiplier = string_length(number) - 1;
+    int index = 0;
+    int val = 0;
+    int neg = 0;
+    int nextVal;
+    
+    // Check if the number is negative
+    if (number[0] == '-') {
+        multiplier = multiplier - 1;
+        index = 1;
+        neg = 1;
+    };
+
+    // Iterativly compute powers of ten of each digit
+    while (index != string_length(number)) {
+        if (multiplier == 0) {
+            nextVal = digit_string_to_int(number[index]);
+            val = val + nextVal;
+            break;
+        };
+
+        nextVal = pow(10, multiplier) * digit_string_to_int(number[index]);
+        val = val + nextVal;
+        multiplier = multiplier - 1;
+        index = index + 1;
+    };
+
+    // If the number was negative, we negate the result before returning it
+    if (neg == 1) {
+        return 0 - val;
+    };
+
+    return val;
+};
+
+define int pow(int num, int power) {
+    int sum = num;
+
+    int i = 0;
+    while (i < power - 1) {
+        sum = sum * sum;
+        i = i + 1;
+    };
+    return sum;
+};
+
+// Looks for an end-of-line char in the string, incrimenting an integer for each index reached before the end-of-line char
+define int string_length(str string) {
+    int size = 0;
+    while (string[size] != '\0') {
+        size = size + 1;
+    };
+    return size;
+};
+
+
+// Takes in a char and converts it to a single-digit integer if possible, otherwise behaviour is undefined 
+define int digit_string_to_int(char digit) {
+    int num = (-1);
+    //print(digit);
+    if (digit == '0') {
+        num = 0;
+    };
+    if (digit == '1') {
+        num = 1;
+    };
+    if (digit == '2') {
+        num = 2;
+    };
+    if (digit == '3') {
+        num = 3;
+    };
+    if (digit == '4') {
+        num = 4;
+    };
+    if (digit == '5') {
+        num = 5;
+    };
+    if (digit == '6') {
+        num = 6;
+    };
+    if (digit == '7') {
+        num = 7;
+    };
+    if (digit == '8') {
+        num = 8;
+    };
+    if (digit == '9') {
+        num = 9;
+    };
+
+    return num;
+};

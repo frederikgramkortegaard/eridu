@@ -1,0 +1,4 @@
+int a;
+a = cast(int, 15.5);
+
+

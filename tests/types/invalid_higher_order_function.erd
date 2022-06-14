@@ -1,0 +1,10 @@
+callable a;
+
+
+define int b(<float>callable<int, float> hof ) {
+    return 1;
+};
+
+
+
+b(a);

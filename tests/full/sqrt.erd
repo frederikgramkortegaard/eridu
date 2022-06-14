@@ -1,0 +1,18 @@
+define float sqrt(float n) {
+    float temp;
+    float sqr;
+
+    sqr = n / 2.0;
+    temp = 0.0;
+
+    while (sqr != temp) {
+        temp = sqr;
+        sqr = n / temp + temp;
+        sqr = sqr / 2.0;
+    };
+    print(temp);
+    return temp;
+};
+
+print(sqrt(8.0));
+print(sqrt(8.0) * sqrt(8.0));

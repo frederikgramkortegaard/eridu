@@ -1,0 +1,9 @@
+while(5<9){
+    print(3);
+};
+
+continue;
+
+//%% OUTPUT
+//$$error
+//%% END

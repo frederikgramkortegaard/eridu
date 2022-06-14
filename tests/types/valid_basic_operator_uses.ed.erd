@@ -1,0 +1,28 @@
+float b;
+char c;
+c = 'j';
+b = 5.5;
+
+define float l(){
+    int h;
+    {
+        int k;
+    };
+
+    define float g(char o) {
+            return 0.0;
+    };
+
+    define int t(){
+            return 5;
+    };
+
+    {
+      int f;  
+      return 2.2;
+    };
+
+    {
+        return 1.2;
+    };
+};

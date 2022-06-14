@@ -1,0 +1,9 @@
+print(5+5);
+print(5 - 2);
+print(5*5);
+print(10/2);
+print(10 % 3);
+print(5.0+5.0);
+print(5.0 - 2.0);
+print(5.0*5.0);
+print(10.0/2.0);

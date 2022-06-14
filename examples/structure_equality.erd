@@ -1,0 +1,14 @@
+
+struct MyStruct = { int a, int b };
+struct TheirStruct = { int a, int b };
+
+struct MyStruct * my_struct = allocate(struct MyStruct, 1);
+struct MyStruct * my_struct_2 = allocate(struct MyStruct, 1);
+struct TheirStruct * their_struct = allocate(struct TheirStruct, 1);
+
+if (my_struct == my_struct_2)  { 
+    print("Equivalent"); // Equivalent
+}; 
+if (my_struct == their_struct) {
+    print("Not Equivalent"); // Did not trigger
+}; 

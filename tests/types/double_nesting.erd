@@ -1,0 +1,21 @@
+int a = 5;
+
+int b = 5;
+
+define int c(int g, int k, int m) {
+
+    define int n(int x) {
+  
+        define int y(int h) {
+
+            return 1;
+    
+        };
+        return y(x);
+    
+    };
+
+    return n(g);
+};
+
+print(c(1,2,b));

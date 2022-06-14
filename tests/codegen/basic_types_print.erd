@@ -1,0 +1,4 @@
+print('c');
+print(5);
+print(7.5);
+print("Hello World!");

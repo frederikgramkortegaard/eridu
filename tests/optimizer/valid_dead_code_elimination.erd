@@ -1,0 +1,10 @@
+
+
+
+int a = 1;
+int b = 1;
+
+if (a==a){
+    print("a is equal to a");
+};
+

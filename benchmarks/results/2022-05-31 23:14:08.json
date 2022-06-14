@@ -1,0 +1,106 @@
+{
+  "./primefactors_quart": {
+    "primefactors.c": 0.00028166815270014924,
+    "primefactors.cpp": 0.000322351418499602,
+    "primefactors.erd": 0.0003915511744999094,
+    "primefactors.cs": 0.007880060689899984
+  },
+  "./program_setup_teardown": {
+    "setup_teardown.erd": 0.000372228444499342,
+    "setup_teardown.cpp": 0.00027820738630034614,
+    "setup_teardown.cs": 0.007893165606100228,
+    "setup_teardown.c": 0.0002819883536998532
+  },
+  "./naivepatternmatch_half": {
+    "naivepatternmatch.cpp": 0.00033459826950056593,
+    "naivepatternmatch.erd": 0.0003902664184999594,
+    "naivepatternmatch.cs": 0.01215489349020063,
+    "naivepatternmatch.c": 0.00028477094119953107
+  },
+  "./knapsack_quart": {
+    "knapsack.c": 0.0002803792061997228,
+    "knapsack.cs": 0.008083751973399922,
+    "knapsack.cpp": 0.00031353211410023506,
+    "knapsack.erd": 0.0003808690054000181
+  },
+  "./helloworld": {
+    "helloworld.erd": 0.00038080860039990514,
+    "helloworld.cs": 0.01190978220189936,
+    "helloworld.cpp": 0.0003228221348996158,
+    "helloworld.c": 0.0002816020368001773
+  },
+  "./fibonacci": {
+    "fibonacci.cs": 0.007922285566999926,
+    "fibonacci.erd": 0.000565416499300045,
+    "fibonacci.cpp": 0.0003410260101001768,
+    "fibonacci.c": 0.0002971040976997756
+  },
+  "./bubblesort_half": {
+    "bubblesort.erd": 0.0003750829272001283,
+    "bubblesort.cs": 0.008080626373500127,
+    "bubblesort.cpp": 0.00031711082230031026,
+    "bubblesort.c": 0.00027995877459979963
+  },
+  "./bubblesort_quart": {
+    "bubblesort.erd": 0.00037226280489994676,
+    "bubblesort.cs": 0.008125356583699613,
+    "bubblesort.cpp": 0.0003038384625004255,
+    "bubblesort.c": 0.00027481600930041167
+  },
+  "./bubblesort": {
+    "bubblesort.erd": 0.00038067320890040716,
+    "bubblesort.cs": 0.00807638821780056,
+    "bubblesort.cpp": 0.00031872601290015157,
+    "bubblesort.c": 0.00028052886369987393
+  },
+  "./primefactors_half": {
+    "primefactors.c": 0.00027967877829942155,
+    "primefactors.cpp": 0.0003154710809001699,
+    "primefactors.erd": 0.00037827566400010253,
+    "primefactors.cs": 0.007941277978200378
+  },
+  "./fibonacci_half": {
+    "fibonacci.cs": 0.00785928167289967,
+    "fibonacci.erd": 0.00038300193329996547,
+    "fibonacci.cpp": 0.0003229927765998582,
+    "fibonacci.c": 0.00028791659370035633
+  },
+  "./fibonacci_quart": {
+    "fibonacci.cs": 0.007911826125500374,
+    "fibonacci.erd": 0.00038446849499960083,
+    "fibonacci.cpp": 0.00032216113149988813,
+    "fibonacci.c": 0.0002821707506001985
+  },
+  "./naivepatternmatch_quart": {
+    "naivepatternmatch.cpp": 0.00034695469719954415,
+    "naivepatternmatch.erd": 0.0004349376500998915,
+    "naivepatternmatch.cs": 0.01229293704360025,
+    "naivepatternmatch.c": 0.0002896735971997259
+  },
+  "./naivepatternmatch": {
+    "naivepatternmatch.cpp": 0.00036835270209994634,
+    "naivepatternmatch.erd": 0.0005854264251996938,
+    "naivepatternmatch.cs": 0.012288005424699804,
+    "naivepatternmatch.c": 0.0003095355213001312
+  },
+  "./primefactors": {
+    "primefactors.c": 0.0002873329427995486,
+    "primefactors.cpp": 0.0003275406038002984,
+    "primefactors.erd": 0.0004085504034999758,
+    "primefactors.cs": 0.007865270097600296
+  },
+  "./knapsack_half": {
+    "knapsack.c": 0.0002972017915999459,
+    "knapsack.cs": 0.00800205328880038,
+    "knapsack.cpp": 0.00032958986180019564,
+    "knapsack.erd": 0.0004569238885999075
+  },
+  "./knapsack": {
+    "knapsack.c": 0.00032466523080001936,
+    "knapsack.cs": 0.008177802327099925,
+    "knapsack.cpp": 0.0003425663476002228,
+    "knapsack.erd": 0.0007375786302996857
+  },
+  "time": "2022-05-31 23:14:08",
+  "runs": 10000
+}

@@ -1,0 +1,46 @@
+// Program to print all prime factors
+
+// A function to print all prime factors of a given number n
+define int primeFactors(int n) {
+    // Print the number of 2s that divide n
+    while (n%2 == 0) {
+        n = n/2;
+    };
+ 
+    // n must be odd at this point.  So we can skip
+    // one element (Note i = i +2)
+    int i = 3;
+    while (cast(float, i) <= sqrt(cast(float, n))) {
+        // While i divides n, print i and divide n
+        while (n%i == 0) {
+            n = n/i;
+        };
+        i = i + 2;
+    };
+ 
+    // This condition is to handle the case when n
+    // is a prime number greater than 2
+    return 0;
+};
+ 
+int n = 98950;
+primeFactors(n);
+
+// computes the square root of a number
+define float sqrt(float n) {
+    float temp;
+    float sqr;
+
+    sqr = n / 2.0;
+    temp = 0.0;
+
+
+
+    while (sqr != temp) {
+        temp = sqr;
+        sqr = n / temp + temp;
+        sqr = sqr / 2.0;
+    };
+
+    return temp;
+};

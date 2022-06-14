@@ -1,0 +1,14 @@
+
+define int some(int thing) {
+
+    return 4 + thing;
+
+};
+
+int a = some(6 + 6);
+print(a);
+
+//%% OUTPUT
+//16
+//%% END
+

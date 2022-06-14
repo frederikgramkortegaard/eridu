@@ -1,0 +1,136 @@
+// The following is merely an example, various constructors are not actually implemented.
+// If they were however, this would be completely valid .erd code.
+
+
+
+
+struct Lights = {
+    int is_on,
+    <int> callable<struct Lights *> off,
+    <int> callable<struct Lights *> on,
+};
+
+struct Projector = {
+    <int> callable <struct Projector *, int> play_movie,
+};
+
+struct Speaker = {
+    int volume,
+    <int> callable <struct Speaker *, int> play_track,
+    <int> callable <struct Speaker *, int> set_volume,
+};
+
+
+struct TheaterFacade = {
+    struct Lights * lights,
+    struct Projector * projector,
+    struct Speaker * speaker,
+
+    <int> callable<struct TheaterFacade *> start_movie,
+};
+
+define int _begin_movie(struct TheaterFacade * this) {
+    // Turn of Lights
+    struct Lights * lights = this.lights;
+    callable off = lights.off;
+    off(lights);
+
+    // Play Movie
+    struct Projector * projector = this.projector;
+    callable play = projector.play_movie;
+    play(projector, 1);
+
+    // Play Soundtrack
+    struct Speaker * speaker = this.speaker;
+    callable soundtrack = speaker.play_track;
+    soundtrack(speaker, 6);
+
+    // Set Volume
+    callable set_volume = speaker.set_volume;
+    set_volume(speaker, 60);
+    return 0;
+};
+
+define struct TheaterFacade * make_theater(){
+    struct TheaterFacade * this = allocate(struct TheaterFacade , 1);
+    this.lights = make_lights();
+    this.projector = make_projector();
+    this.speaker = make_speaker();
+    this.start_movie = _begin_movie;
+    return this;
+};
+
+// Facade now allows simple access
+// To a more complex system.
+struct TheaterFacade * theater = make_theater();
+callable start_movie = theater.start_movie;
+start_movie(theater);
+
+
+
+//
+// Constructors and dummy functions
+//
+
+define int lightson(struct Lights * light) {
+    light.is_on = 1;
+    print("Turning Lights on");
+    return 0;
+};
+
+
+define int lightsoff(struct Lights * light) {
+    light.is_on = 0;
+    print("Turning Lights off");
+
+    return 0;
+};
+
+
+define struct Lights * make_lights(){
+    struct Lights * light = allocate(struct Lights, 1);
+    light.is_on = 0;
+    light.on = lightson;
+    light.off = lightsoff;
+    return light;
+};
+
+define int play_movie(struct Projector * p, int id) {
+    // If this wasn't an example, this would do something.
+    print("Playing Movie with id:");
+    print(id);
+    return id;
+};
+
+define struct Projector * make_projector() {
+    struct Projector * p = allocate(struct Projector, 1);
+    p.play_movie = play_movie;
+    return p;
+};
+
+
+
+
+define int play_track(struct Speaker * s, int id) {
+    // If this wasn't an example, this would do something.
+    print("Playing Track with id");
+    print(id);
+    return id;
+};
+
+define int set_volume(struct Speaker * s, int id) {
+    // If this wasn't an example, this would do something.
+    print("Setting Volume to");
+    print(id);
+    return id;
+};
+
+define struct Speaker * make_speaker() {
+    
+    struct Speaker * s = allocate(struct Speaker, 1);
+    s.volume = 0;
+    s.set_volume = set_volume;
+    s.play_track = play_track;
+    return s;
+
+};

@@ -1,0 +1,18 @@
+struct MyStruct = {
+    int a,
+    struct MyStruct * left 
+};
+
+// Constructor
+define struct MyStruct * build_MyStruct() {
+
+    struct MyStruct  * new_struct = allocate(struct MyStruct, 1);
+    new_struct.a = 1;
+    return new_struct;
+};
+
+struct MyStruct * built = build_MyStruct();
+print(built.a);
+//%% OUTPUT
+//1
+//%% END

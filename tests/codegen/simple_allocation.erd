@@ -1,0 +1,19 @@
+int * ptr;
+ptr = allocate(int, 1);
+
+int * ptr2;
+
+ptr2 = allocate(int, 1);
+
+
+dereference(ptr) = 5;
+
+dereference(ptr2) = 7;
+
+print(dereference(ptr));
+
+print(dereference(ptr2));
+
+dereference(ptr) = dereference(ptr) + dereference(ptr2);
+
+print(dereference(ptr));

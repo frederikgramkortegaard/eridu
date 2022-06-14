@@ -1,0 +1,19 @@
+int ** arr;
+int ** arr2;
+
+arr2 = arr;
+
+// Equality comparisons between arrays are supported only as '==' and '!='
+// and work by checking the literal addresses of the arrays.
+if (arr!=arr2) { print("Not Equal"); };
+if (arr==arr2) { print("Equal!"); };
+
+// The following are not allowed
+// : if (arr <= arr2) { print("LEQ"); };
+// : if (arr >= arr2) { print("GEQ"); };
+// : if (arr > arr2) { print("GREAT"); };
+// : if (arr < arr2) { print("LESS"); };
+
+//%% OUTPUT
+//Equal!
+//%% END

@@ -1,0 +1,25 @@
+
+define int outer() {
+    return 1;
+};
+
+callable a = outer;
+
+
+define int main() {
+
+    define int func(){
+        return 0;
+    };
+
+    a = func;
+};
+main();
+
+int b = a();
+
+print(b);
+
+//%% OUTPUT
+//0
+//%% END

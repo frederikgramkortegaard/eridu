@@ -1,0 +1,12 @@
+// This should given an error at compile-time
+
+struct MyStruct = {
+    char **a,
+    char a
+};
+
+struct MyStruct * hej;
+
+//%% OUTPUT
+//$$error
+//%% END

@@ -1,0 +1,7 @@
+
+
+int a;
+int b;
+
+a = castable(int, 5);
+b = castable(float, 8);

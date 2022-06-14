@@ -1,0 +1,50 @@
+// Knapsack problem solver
+
+define int max(int a, int b) {
+  if (a > b) {
+    return a;
+  };
+  
+  return b;
+};
+
+define int knapsack(int W, int * wt, int * val, int n){
+
+    if(W == 0){
+        return 0;
+    };
+
+    if(n == 0){
+        return 0;
+    };
+
+    if(wt[n-1] > W){
+        return knapsack(W, wt, val, n-1);
+    };
+
+    return max(val[n-1] + knapsack(W-wt[n-1], wt, val, n-1), knapsack(W, wt, val, n-1));
+
+};
+
+
+int * wt = allocate(int, 20);
+int * val = allocate(int, 20);
+
+wt[0] = 10;
+wt[1] = 20;
+wt[2] = 30;
+wt[3] = 40;
+wt[4] = 50;
+
+
+val[0] = 60;
+val[1] = 100;
+val[2] = 120;
+val[3] = 140;
+val[4] = 160;
+
+
+
+int n = 5;
+int W = 90;
+int a = max(val[n-1] + knapsack(W-wt[n-1], wt, val, n-1), knapsack(W, wt, val, n-1));

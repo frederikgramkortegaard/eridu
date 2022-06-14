@@ -1,0 +1,9 @@
+define int main(){
+    print("Heyoo");
+    return 0;
+};
+main();
+
+//%% OUTPUT
+//Heyoo
+//%% END
