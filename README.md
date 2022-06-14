@@ -24,7 +24,7 @@ From here, the newly created `output.s` file can be constructed into a runnable 
 
 We advice the reader to test the following examples:
 ```
-./build/compiler < examples/generic_vehicle_simulator.erd`
+./build/compiler < ./examples/generic_vehicle_simulator.erd`
 
 ./build/compiler < ./examples/iterator.erd
 ```
