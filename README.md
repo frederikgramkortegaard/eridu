@@ -1,12 +1,11 @@
 # Eridu | C-Like Programming Language
 Eridu is a C-Like Language featuring Abstract Data Types, Function Pointers, a Custom Intermediate Representation and Optimized x86 AT&T ASM Output
 
-
 :pushpin: [Thesis](https://github.com/frederikgram/eridu/blob/master/Thesis.pdf)
 
-:pushpin: [Project Description](https://github.com/frederikgram/eridu/blob/master/projectdescription.pdf)
-
 :pushpin: [Code Examples](https://github.com/frederikgram/eridu/tree/master/examples)
+
+:pushpin: [Project Description](https://github.com/frederikgram/eridu/blob/master/projectdescription.pdf)
 
 :speech_balloon: The reader is advised to look at the section 8 regarding performance evaluation in the attached thesis to get an overview of the viability of the language. 
 
