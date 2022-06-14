@@ -2,6 +2,7 @@
 C-Like Languages featuring support for abstract data types, a custom intermediate representation and optimized x86 ASM output.
 
 :pushpin: [Thesis](https://github.com/frederikgram/eridu/blob/master/Thesis.pdf)
+
 :pushpin: [Project Description](https://github.com/frederikgram/eridu/blob/master/projectdescription.pdf)
 
 NOTE: This compiler is only expected to work on Linux based distros such as Ubuntu. The correctness on other operating systems can not be guaranteed.
