@@ -1,5 +1,5 @@
 # Eridu | C-Like Programming Language
-Eridu is a C-Like Language featuring Abstract Data Types, Function Pointers, a Custom Intermediate Representation and Optimized x86 AT&T ASM Output.
+Eridu is a fully fledged C-Like programming language featuring various abstract data types, functions as first-class citizens, and multi-paradigm functionality. Every step including semantic analysis, machine independent optimization, custom intermediate representations, and x86 Assembly code generation were written from scratch in C. Testing and benchmarking was performed using Python based frameworks written from scratch, as shown in sections 6. and 8. of the thesis in which a formal description of Eridu is given. 
 
 :pushpin: [Thesis](https://github.com/frederikgram/eridu/blob/master/Thesis.pdf)
 
