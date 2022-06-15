@@ -10,9 +10,6 @@ Eridu is a fully fledged C-Like programming language featuring various abstract 
 :speech_balloon: The reader is advised to look at section _8.x_ regarding performance evaluation in the attached thesis to get an overview of the viability of the language as well as comparisons to C and C++ with regards to run-time and scalability metrics.
 
 ---
-
-### Compiling Eridu from Source
-It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`, it is recommended to run `make clean` before any attempt to compile Eridu. 
 ### Using the Eridu compiler
 To use the compiler, the following command can be run:
 ```
@@ -33,9 +30,11 @@ Followed by:
 gcc -no-pie output.s
 ./a.out
 ```
+### Compiling Eridu from Source
+It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`, it is recommended to run `make clean` before any attempt to compile Eridu. 
+
 ### Testing
 Tests can be run using our testing framework _Gula_, to use this framework, Python 3.8 and the numpy package is required. To see the help menu, use the command:
-
 ```
 python3 ./tests/gula.py -help
 ```
