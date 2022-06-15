@@ -7,7 +7,7 @@ Eridu is a fully fledged C-Like programming language featuring various abstract 
 
 :pushpin: [Project Description](https://github.com/frederikgram/eridu/blob/master/projectdescription.pdf)
 
-:speech_balloon: The reader is advised to look at section _8.x_ regarding performance evaluation in the attached thesis to get an overview of the viability of the language as well as comparisons to C and C++ with regards to run-time and scalability metrics.
+:speech_balloon: The reader is advised to look at section 8. regarding performance evaluation in the attached thesis to get an overview of the viability of the language as well as comparisons to C and C++ with regards to run-time and scalability metrics.
 
 ---
 ### Using the Eridu compiler
