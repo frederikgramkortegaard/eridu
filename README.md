@@ -11,9 +11,9 @@ Eridu is a fully fledged C-Like programming language featuring various abstract 
 
 ---
 
-### How to compile
+### Compiling Eridu from Source
 It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`, it is recommended to run `make clean` before any attempt to compile Eridu. 
-### Running the pre-made code examples
+### Using the Eridu compiler
 To use the compiler, the following command can be run:
 ```
 ./path/to/compiler < ./path/to/file.erd
