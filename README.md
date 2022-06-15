@@ -31,7 +31,7 @@ gcc -no-pie output.s
 ./a.out
 ```
 ### Compiling Eridu from Source
-It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`, it is recommended to run `make clean` before any attempt to compile Eridu. 
+It is possible to compile Eridu from source, by navigating to the `./dev/src` folder and running `make`. Verbose output from the compilation process such as Abstract Syntax Tree structures or the code generation process can be exposed by using `make debug` instead. 
 
 ### Testing
 Tests can be run using our testing framework _Gula_, to use this framework, Python 3.8 and the numpy package is required. To see the help menu, use the command:
