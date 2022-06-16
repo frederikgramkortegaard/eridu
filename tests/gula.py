@@ -7,8 +7,8 @@ Usage: gula.py [-verbose] -path <folder/filepath> -src <folder containing ./comp
     #---------------------------------#
     |    ERIDU-CODE                   |
     |//%% OUTPUT                      |
-    |// First Expected Line of Output |
-    |// Second Expected Line ...      |
+    |//First Expected Line of Output |
+    |//Second Expected Line ...      |
     |//%% END
     #---------------------------------#
 
