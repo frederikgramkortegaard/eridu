@@ -1,8 +1,5 @@
 # Eridu - C-Like Programming Language
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/frederikgram/eridu/blob/master/LICENSE)
-[![CodeQL](https://github.com/frederikgram/eridu/workflows/CodeQL/badge.svg)](https://github.com/frederikgram/eridu/actions?query=workflow%3ADependency+Review)
-[![Dependency Review](https://github.com/frederikgram/eridu/workflows/Dependency%20Review/badge.svg)]()
-
 
 Eridu is a fully fledged C-Like programming language featuring various abstract data types, functions as first-class citizens, and multi-paradigm functionality, written from scratch in C , targeting x86 AT&T Assembly.
 
