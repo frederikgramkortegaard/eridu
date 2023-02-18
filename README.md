@@ -3,7 +3,7 @@
 
 Eridu is a fully fledged C-Like programming language featuring various abstract data types, functions as first-class citizens, and multi-paradigm functionality, written from scratch in C , targeting x86 AT&T Assembly.
 
-Testing and benchmarking was performed using a self-made Python framework written from scratch as shown in sections 6. and 8. of the thesis in which a formal description of Eridu can also be found.
+Testing and benchmarking was performed using a custom Python framework written from scratch as shown in sections 6. and 8. of the thesis in which a formal description of Eridu can also be found.
 
 :pushpin: [Thesis](https://github.com/frederikgram/eridu/blob/master/Thesis.pdf)
 
